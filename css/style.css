@@ -1,0 +1,212 @@
+html{
+    scroll-behavior:smooth;
+}
+body{
+    overflow-x:hidden;
+}
+header{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    padding:40px 100px;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    transition:all 2s;
+}
+header.sticky{
+    padding:5px 100px;
+    background:rgba(0, 0, 0, 0.685);
+}
+header.sticky h1{
+    color:#eee;
+    text-shadow: unset;
+}
+header.sticky ul li >a{
+    color:#eee;
+    text-shadow: unset;
+}
+
+
+nav{
+    margin-right:-70px;
+    padding-top:20px;
+}
+nav ul{
+    display:flex;
+}
+nav ul li{
+    margin-right:50px;
+    list-style:none;
+}
+nav ul li > a, h1{
+    text-decoration:none;
+    color:#eee;
+    text-shadow:1px 2px 1px rgba(0,0,0,.4);
+    transition:all 2s;
+}
+nav ul li{
+    animation-name:animaciona;
+    animation-duration:5s;
+    animation-iteration-count:1;
+}
+h1{
+    animation-name:animacion;
+    animation-duration:5s;
+    animation-iteration-count:1;
+}
+::-webkit-scrollbar{
+    width:8px;
+    background:rgba(5, 5, 114, 0.76);
+}
+::-webkit-scrollbar-thumb{
+    background:#eee;
+    border-radius:20px;
+}
+
+/*section one*/
+.sesion1{
+
+    background:url(../imgs/pikb29.jpg);
+    background-size:cover;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+#sesion1__content{
+    font-size:30px;
+    text-shadow:1px 2px 1px rgba(0,0,0,.4);
+}
+#sesion1__h2, #sesion1__p{
+    
+    animation-name:sesion1;
+    animation-duration:5s;
+    animation-iteration-count:1;
+}
+#sesion1__p{
+
+    animation-duration:7s;
+
+}
+
+@keyframes animacion{
+    0%{
+        transform:translatex(-600px);
+    }
+}
+@keyframes animaciona{
+    0%{
+        transform:translatex(800px);
+    }
+}
+@keyframes sesion1{
+    0%{
+        transform:translatey(50px);
+        opacity:0;
+
+    }
+}
+
+/*section two*/
+.section2__article1{
+    background:url(../imgs/hjy2_cizz_190125.jpg);
+    background-size:cover;
+    height:100vh;
+    
+}
+.artilce1__content{
+    background:rgba(0,0,0,.6);
+    width:30%;
+    height:100%;
+    color:#eee;
+    padding:160px 20px 0px 20px;
+}
+
+
+/*article two*/
+.sesion2__article2{
+
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../imgs/pikb28.jpg);
+    background-size:cover;
+    background-position:center,bottom;
+    height:100vh;
+    color:#eee;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:0px 80px;
+    font-size:20px;
+}
+
+
+/*Artile  three*/
+.sesion1__articcle3{
+    background:url(../imgs/Paris\ Illustration.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:100vh;
+    overflow-x:hidden;
+    
+}
+
+#cloud1, #cloud2, #cloud3, #cloud4{
+    width:100px;
+    position:absolute;
+    z-index:50;
+}
+#cloud1{
+    margin-top:200px;
+    right:-350px;
+    width:200px;
+    animation:clouds 18s infinite reverse linear;
+    opacity:.8;
+}
+#cloud2, #cloud4,  #cloud3{
+    margin-top:100px;
+    margin-left:-300px;
+    width:150px;
+    opacity:.8;
+    animation:cloud2 20s infinite reverse linear;
+
+}
+#cloud3{
+    margin-top:60px;
+    width:100px;
+    animation-timing-function:ease-out;
+
+}
+#cloud4{
+    margin-top:400px;
+    width:200px;
+    opacity:.8;
+    animation-timing-function:ease-in;
+}
+@keyframes clouds{
+
+    0%{
+        transform:translatex(-1900px);
+    }
+}
+@keyframes cloud2{
+    0%{
+        transform:translatex(1900px);
+    }
+}
+
+.article__content{
+    position:absolute;
+    z-index:55;
+    color:#eee;
+    text-align:center;
+    margin-top:250px;
+    background:rgba(0,0,0,.4);
+    backdrop-filter:blur(5px);
+    width:60%;
+    left:290px;
+    padding:10px 10px;
+    border-radius:10px;
+}
